@@ -16,8 +16,9 @@ function pingHost () {
       clearInterval(inter1)
       exec(`nircmd infobox "cannot ping ${host}"`)
     }
+  }).catch(function(e) {
+    console.log(e)
   })
 }
 
 var inter1 = setInterval(pingHost, 3000)
-

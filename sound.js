@@ -15,6 +15,8 @@ function pingHost () {
     if (res.alive) {
       exec(`afplay "success.mp3"`)
     }
+  }).catch(function(e) {
+    console.log(e)
   })
 }
 
